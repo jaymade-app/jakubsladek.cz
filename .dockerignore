@@ -1,0 +1,45 @@
+# Dependencies
+node_modules
+
+# Build output (rebuilt in Docker)
+dist
+dist-ssr
+
+# Git
+.git
+.gitignore
+
+# IDE
+.ide
+ide
+.vscode
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.*
+
+# Logs
+*.log
+npm-debug.log*
+logs
+
+# Dev files
+TASKLIST.md
+CHANGELOG.md
+LICENSE
+README.md
+
+# Docker (prevent recursive context)
+Dockerfile
+docker-compose*.yml
+.dockerignore
