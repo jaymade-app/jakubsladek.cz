@@ -68,7 +68,7 @@
         .z-50 {
             z-index: 50;
         }
-        .backdrop-blur-sm {
+        .backdrop-blur-xs {
             backdrop-filter: blur(4px);
         }
         .border-b {
@@ -141,10 +141,10 @@
     <div class="min-h-screen">
         <!-- Navigation Bar -->
         <nav
-            class="fixed w-full z-50 bg-pure-white/80 dark:bg-pure-black/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700">
+            class="fixed w-full z-50 bg-pure-white/80 dark:bg-pure-black/80 backdrop-blur-xs border-b border-gray-200 dark:border-gray-700">
             <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-14 sm:h-16">
-                    <div class="flex-shrink-0">
+                    <div class="shrink-0">
                         <span class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">JS</span>
                     </div>
                     <div class="hidden md:block">
@@ -179,13 +179,13 @@
                         srcset="/public/images/profile/js-light-160.webp 160w, /public/images/profile/js-light-320.webp 320w"
                         sizes="(max-width: 640px) 128px, 160px"
                         alt="Jakub Sládek"
-                        class="w-full h-full object-cover rounded-full shadow-lg border-4 border-white dark:border-gray-800 profile-image dark:hidden"
+                        class="w-full h-full object-cover rounded-full shadow-lg border-4 border-white dark:border-gray-800 profile-image light-profile"
                         width="160" height="160" fetchpriority="high">
                     <img src="/public/images/profile/js-dark-160.webp" 
                         srcset="/public/images/profile/js-dark-160.webp 160w, /public/images/profile/js-dark-320.webp 320w"
                         sizes="(max-width: 640px) 128px, 160px"
                         alt="Jakub Sládek"
-                        class="w-full h-full object-cover rounded-full shadow-lg border-4 border-white dark:border-gray-800 profile-image hidden dark:block"
+                        class="w-full h-full object-cover rounded-full shadow-lg border-4 border-white dark:border-gray-800 profile-image dark-profile"
                         width="160" height="160" fetchpriority="high">
                 </div>
                 <h1
@@ -386,7 +386,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 max-w-7xl mx-auto">
                 <article class="card-base group overflow-hidden flex flex-col h-full">
                     <div class="p-6 flex flex-col h-full">
-                        <div class="flex-grow">
+                        <div class="grow">
                             <h3
                                 class="text-xl sm:text-xl md:text-2xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                 💫 excape.pro</h3>
@@ -406,7 +406,7 @@
                 </article>
                 <article class="card-base group overflow-hidden flex flex-col h-full">
                     <div class="p-6 flex flex-col h-full">
-                        <div class="flex-grow">
+                        <div class="grow">
                             <h3
                                 class="text-xl sm:text-xl md:text-2xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                 ✨ ChatLumos</h3>
@@ -431,7 +431,7 @@
                 </article>
                 <article class="card-base group overflow-hidden flex flex-col h-full">
                     <div class="p-6 flex flex-col h-full">
-                        <div class="flex-grow">
+                        <div class="grow">
                             <h3
                                 class="text-xl sm:text-xl md:text-2xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                 🚀 Personal Portfolio Website</h3>
@@ -485,11 +485,11 @@
 
                 <!-- Decorative elements -->
                 <div class="absolute top-0 right-0 mt-4 mr-4 hidden md:block">
-                    <div class="w-24 h-24 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 opacity-10 blur-xl">
+                    <div class="w-24 h-24 rounded-full bg-linear-to-r from-blue-400 to-purple-500 opacity-10 blur-xl">
                     </div>
                 </div>
                 <div class="absolute bottom-0 left-0 -mb-4 -ml-4 hidden md:block">
-                    <div class="w-32 h-32 rounded-full bg-gradient-to-r from-pink-400 to-blue-500 opacity-10 blur-xl">
+                    <div class="w-32 h-32 rounded-full bg-linear-to-r from-pink-400 to-blue-500 opacity-10 blur-xl">
                     </div>
                 </div>
             </div>
@@ -497,7 +497,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="py-6 bg-pure-white dark:bg-pure-black border-t border-gray-200 dark:border-gray-800">
+    <footer class="py-6 bg-pure-white border-t border-gray-200 dark:border-gray-800 site-footer">
         <div class="text-center text-gray-600 dark:text-gray-400 text-sm">
             Made with <span class="text-red-500">❤️</span> by Jakub Sládek
         </div>

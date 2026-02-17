@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import viteCompression from 'vite-plugin-compression'
-import imagemin from 'vite-plugin-imagemin'
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 
 export default defineConfig({
   server: {
@@ -49,7 +49,7 @@ export default defineConfig({
   },
   // Enable asset preloading
   optimizeDeps: {
-    include: ['three', 'gsap', '@studio-freight/lenis'],
+    include: ['gsap'],
     exclude: []
   },
   // Preserve some custom directives
@@ -73,46 +73,30 @@ export default defineConfig({
       deleteOriginFile: false,
     }),
     // Optimize images - with more aggressive settings
-    imagemin({
-      gifsicle: {
-        optimizationLevel: 7,
-        interlaced: false,
+    ViteImageOptimizer({
+      png: {
+        quality: 75,
       },
-      optipng: {
-        optimizationLevel: 7,
-      },
-      mozjpeg: {
-        quality: 75, // Lower quality for better compression
+      jpeg: {
+        quality: 75,
         progressive: true,
       },
-      pngquant: {
-        quality: [0.7, 0.8], // More aggressive compression
-        speed: 4,
-      },
-      svgo: {
-        plugins: [
-          {
-            name: 'removeViewBox',
-            active: false,
-          },
-          {
-            name: 'removeEmptyAttrs',
-            active: false,
-          },
-          {
-            name: 'cleanupIDs',
-            active: true,
-          },
-          {
-            name: 'removeUselessStrokeAndFill',
-            active: true,
-          }
-        ],
+      jpg: {
+        quality: 75,
+        progressive: true,
       },
       webp: {
-        quality: 75, // Lower quality for better compression
-        method: 6, // Higher compression method
-        nearLossless: 60,
+        quality: 75,
+        effort: 6,
+        nearLossless: false,
+      },
+      svg: {
+        plugins: [
+          { name: 'removeViewBox', active: false },
+          { name: 'removeEmptyAttrs', active: false },
+          { name: 'cleanupIds', active: true },
+          { name: 'removeUselessStrokeAndFill', active: true },
+        ],
       },
     }),
   ],

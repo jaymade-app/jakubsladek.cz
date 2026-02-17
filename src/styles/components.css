@@ -34,7 +34,7 @@
 }
 
 .dark #contact {
-    background-color: transparent;
+    background-color: var(--color-pure-black);
 }
 
 .dark #contact h2 {
@@ -56,7 +56,10 @@
 }
 
 /* Simplified group element transitions */
-.group h3, .group p, .group .flex, .group a {
+.group h3,
+.group p,
+.group .flex,
+.group a {
     transition: transform 0.3s ease;
     will-change: transform;
 }
@@ -116,6 +119,28 @@
 
 .dark .profile-image:hover {
     filter: brightness(1.15);
+}
+
+/* Profile image dark/light mode swap - CSS-based for Tailwind v4 specificity */
+.light-profile {
+    display: block;
+}
+
+.dark-profile {
+    display: none;
+}
+
+.dark .light-profile {
+    display: none;
+}
+
+.dark .dark-profile {
+    display: block;
+}
+
+/* Footer dark mode */
+.dark .site-footer {
+    background-color: var(--color-pure-black);
 }
 
 #contact .btn-social {
