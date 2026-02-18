@@ -8,32 +8,12 @@
         http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
   <url>
     <loc>https://jakubsladek.cz/</loc>
-    <lastmod>2025-03-23</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-02-18</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://jakubsladek.cz/src/images/js.webp</image:loc>
-      <image:title>Jakub Sládek - Full Stack Developer</image:title>
-      <image:caption>Profile photo of Jakub Sládek</image:caption>
+      <image:loc>https://jakubsladek.cz/images/profile/js-light-320.webp</image:loc>
+      <image:title>Jakub Sládek - Context Engineer &amp; Full Stack Developer</image:title>
     </image:image>
-  </url>
-  <!-- Section URLs for better indexing -->
-  <url>
-    <loc>https://jakubsladek.cz/#about</loc>
-    <lastmod>2025-03-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jakubsladek.cz/#projects</loc>
-    <lastmod>2025-03-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://jakubsladek.cz/#contact</loc>
-    <lastmod>2025-03-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
 </urlset>

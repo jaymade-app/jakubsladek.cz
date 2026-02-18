@@ -60,8 +60,6 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-display: swap; /* Optimize font loading */
-    /* Removed will-change property to fix nav visibility issues */
 }
 
 body.loaded {

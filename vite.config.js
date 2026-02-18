@@ -9,29 +9,21 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-    // Enable minification with the fastest option (esbuild)
     minify: 'esbuild',
     cssMinify: true,
-    // Generate sourcemaps only in development
     sourcemap: process.env.NODE_ENV === 'development',
-    // Improve chunk size and distribution
     chunkSizeWarningLimit: 800,
-    // Optimize output for faster loading
     rollupOptions: {
       input: {
         main: './index.html'
       },
       output: {
-        // Use content hashing for cache busting
         entryFileNames: 'assets/[name].[hash].js',
         chunkFileNames: 'assets/[name].[hash].js',
         assetFileNames: 'assets/[name].[hash].[ext]',
-        // Modern approach for chunk splitting
         manualChunks: (id) => {
           if (id.includes('node_modules')) {
-            if (id.includes('three')) return 'vendor_three';
             if (id.includes('gsap')) return 'vendor_gsap';
-            if (id.includes('@studio-freight/lenis')) return 'vendor_lenis';
             return 'vendor';
           }
           if (id.includes('src/modules/animations.js')) {
@@ -44,26 +36,17 @@ export default defineConfig({
         }
       }
     },
-    // Optimize assets - lower limit to inline fewer files
-    assetsInlineLimit: 2048, // Inline small files (2kb)
+    assetsInlineLimit: 2048,
   },
-  // Enable asset preloading
   optimizeDeps: {
     include: ['gsap'],
-    exclude: []
   },
-  // Preserve some custom directives
-  esbuild: {
-    jsxFactory: 'h',
-    jsxFragment: 'Fragment'
-  },
-  publicDir: 'public', // Files in this directory will be served at root path and copied to dist on build
+  publicDir: 'public',
   plugins: [
-    // Enable compression
     viteCompression({
       algorithm: 'gzip',
       ext: '.gz',
-      threshold: 1024, // Only compress files > 1kb
+      threshold: 1024,
       deleteOriginFile: false,
     }),
     viteCompression({
@@ -72,7 +55,6 @@ export default defineConfig({
       threshold: 1024,
       deleteOriginFile: false,
     }),
-    // Optimize images - with more aggressive settings
     ViteImageOptimizer({
       png: {
         quality: 75,

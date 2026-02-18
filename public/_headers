@@ -1,69 +1,28 @@
 /*
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
+  X-XSS-Protection: 0
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 
-# Cache HTML for a short time
+# HTML — no cache
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
 
-# Cache favicon
-/favicon.ico
-  Cache-Control: public, max-age=604800, immutable
-
-# Cache robots.txt for a day
-/robots.txt
-  Cache-Control: public, max-age=86400, must-revalidate
-
-# Cache CSS, JavaScript, and assets with content hash in filename for a year
-/*.*.js
-  Cache-Control: public, max-age=31536000, immutable
-/*.*.css
-  Cache-Control: public, max-age=31536000, immutable
-/*.*.jpg
-  Cache-Control: public, max-age=31536000, immutable
-/*.*.jpeg
-  Cache-Control: public, max-age=31536000, immutable
-/*.*.png
-  Cache-Control: public, max-age=31536000, immutable
-/*.*.webp
-  Cache-Control: public, max-age=31536000, immutable
-/*.*.svg
-  Cache-Control: public, max-age=31536000, immutable
-/*.*.woff
-  Cache-Control: public, max-age=31536000, immutable
-/*.*.woff2
-  Cache-Control: public, max-age=31536000, immutable
-
-# Cache assets with proper paths to match deployment
+# Hashed assets — immutable cache
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Specific file type caching rules
-/assets/*.js
-  Cache-Control: public, max-age=31536000, immutable
-/assets/*.css
-  Cache-Control: public, max-age=31536000, immutable
-/assets/*.webp
-  Cache-Control: public, max-age=31536000, immutable
-/assets/*.jpg
-  Cache-Control: public, max-age=31536000, immutable
-/assets/*.png
-  Cache-Control: public, max-age=31536000, immutable
-/assets/*.svg
+# Profile images
+/images/profile/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Cache profile images for a long time (they have content hash in filenames)
-/public/images/profile/*
-  Cache-Control: public, max-age=31536000, immutable
-
-# Cache the assets directory for a month with stale-while-revalidate of a day
-/src/images/*
-  Cache-Control: public, max-age=2592000, stale-while-revalidate=86400
-
-# Cache sitemap for a day
+# Sitemap & robots
 /sitemap.xml
-  Cache-Control: public, max-age=86400, must-revalidate 
+  Cache-Control: public, max-age=86400, must-revalidate
+/robots.txt
+  Cache-Control: public, max-age=86400, must-revalidate

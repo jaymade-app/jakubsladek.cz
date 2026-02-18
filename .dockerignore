@@ -1,45 +1,36 @@
 # Dependencies
 node_modules
 
-# Build output (rebuilt in Docker)
+# Production build files
 dist
 dist-ssr
+*.local
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor directories and files
+.vscode
+.idea
+.DS_Store
+
+# Debug logs
+*.log
 
 # Git
 .git
 .gitignore
 
-# IDE
-.ide
-ide
-.vscode
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Env files
-.env
-.env.*
-
-# Logs
-*.log
-npm-debug.log*
-logs
-
-# Dev files
+# Development files
 TASKLIST.md
 CHANGELOG.md
-LICENSE
 README.md
+LICENSE
 
-# Docker (prevent recursive context)
-Dockerfile
-docker-compose*.yml
-.dockerignore
+# IDE
+ide
+.ide
