@@ -2,9 +2,6 @@
 #contact {
     position: relative;
     overflow: hidden;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    background: transparent;
     transition: transform 0.3s ease;
     width: 100%;
     margin: 0;
@@ -26,7 +23,6 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    text-shadow: var(--shadow-small);
 }
 
 #contact p {

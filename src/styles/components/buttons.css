@@ -35,16 +35,16 @@
   box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
 }
 
-.btn-linkedin:hover {
-  box-shadow: 0 0 15px rgba(0, 119, 181, 0.5);
+.btn-instagram:hover {
+  box-shadow: 0 0 15px rgba(225, 48, 108, 0.5);
 }
 
 .btn-github:hover {
   box-shadow: 0 0 15px rgba(75, 85, 99, 0.5);
 }
 
-.btn-linkedin {
-  @apply bg-[#0077b5];
+.btn-instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
 }
 
 .btn-github {
