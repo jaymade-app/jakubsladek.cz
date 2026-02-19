@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags -->
-    <title>Jakub Sládek | Context Engineer & Full Stack Developer</title>
-    <meta name="description"
+    <title data-i18n="meta.title">Jakub Sládek | Context Engineer & Full Stack Developer</title>
+    <meta name="description" data-i18n-content="meta.description"
         content="Official website of Jakub Sládek, Context Engineer &amp; Full Stack Developer. Building AI-orchestrated, spec-driven solutions with Rust, Next.js, and modern infrastructure.">
-    <meta name="keywords"
+    <meta name="keywords" data-i18n-content="meta.keywords"
         content="Jakub Sládek, Jakub Sladek, Context Engineer, AI Orchestrator, Full Stack Developer, Rust, Next.js, React.js, Docker, PostgreSQL, Czech Developer, Web Developer">
     <meta name="author" content="Jakub Sládek">
     <meta name="robots" content="index, follow">
@@ -25,16 +25,18 @@
     <!-- Social Media Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://jakubsladek.cz/">
-    <meta property="og:title" content="Jakub Sládek | Context Engineer & Full Stack Developer">
-    <meta property="og:description"
+    <meta property="og:title" data-i18n-content="meta.og_title"
+        content="Jakub Sládek | Context Engineer & Full Stack Developer">
+    <meta property="og:description" data-i18n-content="meta.og_description"
         content="Context Engineer & Full Stack Developer. AI-orchestrated, spec-driven solutions with Rust, Next.js, and modern infrastructure.">
     <meta property="og:image" content="https://jakubsladek.cz/images/profile/js-light-320.webp">
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Jakub Sládek">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://jakubsladek.cz/">
-    <meta property="twitter:title" content="Jakub Sládek | Context Engineer & Full Stack Developer">
-    <meta property="twitter:description"
+    <meta property="twitter:title" data-i18n-content="meta.twitter_title"
+        content="Jakub Sládek | Context Engineer & Full Stack Developer">
+    <meta property="twitter:description" data-i18n-content="meta.twitter_description"
         content="Context Engineer & Full Stack Developer. AI-orchestrated, spec-driven solutions with Rust, Next.js, and modern infrastructure.">
     <meta property="twitter:image" content="https://jakubsladek.cz/images/profile/js-light-320.webp">
 
@@ -104,10 +106,6 @@
         .text-lg,
         .text-xl {
             font-weight: 700;
-        }
-
-        .hidden {
-            display: none;
         }
     </style>
 
@@ -179,13 +177,27 @@
                     <div class="hidden md:block">
                         <div class="ml-10 flex items-center space-x-4">
                             <a href="#home"
-                                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Home</a>
+                                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                                data-i18n="nav.home">Home</a>
                             <a href="#about"
-                                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">About</a>
+                                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                                data-i18n="nav.about">About</a>
                             <a href="#projects"
-                                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Projects</a>
+                                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                                data-i18n="nav.projects">Projects</a>
                             <a href="#contact"
-                                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">Contact</a>
+                                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                                data-i18n="nav.contact">Contact</a>
+                            <!-- Language Switcher (Desktop) -->
+                            <a href="/cs/" data-i18n-href="lang.switch_url" data-lang-switch
+                                class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 inline-flex items-center gap-1.5"
+                                data-i18n-aria-label="lang.switch_aria" aria-label="Přepnout do češtiny"><span
+                                    data-i18n="lang.switch_flag"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 900 600" class="w-5 h-3.5 rounded-sm shadow-sm">
+                                        <rect width="900" height="600" fill="#d7141a" />
+                                        <rect width="900" height="300" fill="#fff" />
+                                        <path d="M 0,0 450,300 0,600 z" fill="#11457e" />
+                                    </svg></span> <span data-i18n="lang.switch_label">CS</span></a>
                         </div>
                     </div>
                     <!-- Mobile Hamburger Button -->
@@ -212,13 +224,27 @@
                 class="hidden md:hidden border-t border-gray-200 dark:border-gray-700 bg-pure-white/95 dark:bg-pure-black/95 backdrop-blur-xs">
                 <div class="px-4 py-3 space-y-2">
                     <a href="#home"
-                        class="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Home</a>
+                        class="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                        data-i18n="nav.home">Home</a>
                     <a href="#about"
-                        class="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">About</a>
+                        class="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                        data-i18n="nav.about">About</a>
                     <a href="#projects"
-                        class="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Projects</a>
+                        class="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                        data-i18n="nav.projects">Projects</a>
                     <a href="#contact"
-                        class="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200">Contact</a>
+                        class="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                        data-i18n="nav.contact">Contact</a>
+                    <!-- Language Switcher (Mobile) -->
+                    <a href="/cs/" data-i18n-href="lang.switch_url" data-lang-switch
+                        class="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 inline-flex items-center gap-1.5"
+                        data-i18n-aria-label="lang.switch_aria" aria-label="Přepnout do češtiny"><span
+                            data-i18n="lang.switch_flag"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"
+                                class="w-5 h-3.5 rounded-sm shadow-sm">
+                                <rect width="900" height="600" fill="#d7141a" />
+                                <rect width="900" height="300" fill="#fff" />
+                                <path d="M 0,0 450,300 0,600 z" fill="#11457e" />
+                            </svg></span> <span data-i18n="lang.switch_label">CS</span></a>
                 </div>
             </div>
         </nav>
@@ -245,15 +271,18 @@
                     class="text-4xl sm:text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-4 animate-fade-in">
                     Jakub Sládek
                 </h1>
-                <p class="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 animate-fade-in-delay">
+                <p class="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 animate-fade-in-delay"
+                    data-i18n="hero.subtitle">
                     Context Engineer & Full Stack Developer
                 </p>
                 <div
                     class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 animate-fade-in-delay-2">
-                    <a href="#projects" class="btn-primary view-work-btn" aria-label="View my projects">
+                    <a href="#projects" class="btn-primary view-work-btn" data-i18n="hero.cta_work"
+                        data-i18n-aria-label="hero.cta_work_aria" aria-label="View my projects">
                         View My Work
                     </a>
-                    <a href="#contact" class="btn-secondary" aria-label="Contact me">
+                    <a href="#contact" class="btn-secondary" data-i18n="hero.cta_contact"
+                        data-i18n-aria-label="hero.cta_contact_aria" aria-label="Contact me">
                         Contact Me
                     </a>
                 </div>
@@ -263,22 +292,23 @@
         <!-- About Me Section -->
         <section id="about" class="section-base">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="section-heading">
+                <h2 class="section-heading" data-i18n="about.heading">
                     About Me</h2>
                 <div class="prose prose-lg dark:prose-invert max-w-6xl mx-auto text-gray-600 dark:text-gray-300 px-1">
-                    <p class="mb-6 typewriter-text"
+                    <p class="mb-6 typewriter-text" data-i18n-data-text="about.bio_1"
                         data-text="Hey! I'm Jakub. I build things for the web and lately, I've been deep into making AI actually useful in real products. I work across the full stack, from Rust backends to Next.js frontends, and I care a lot about writing code that's clean and maintainable.">
                     </p>
 
-                    <p class="mb-6 typewriter-text"
+                    <p class="mb-6 typewriter-text" data-i18n-data-text="about.bio_2"
                         data-text="I got into programming back in 2018, tinkering with Steam bots in Node.js. From there I went through the corporate world writing PHP (Laravel, Nette), but eventually went independent to work on things I genuinely care about. Right now I'm building <a href='https://rozhybejfoto.cz' target='_blank' rel='noopener'>rozhybejfoto.cz</a>, a service that brings photos to life with AI, and running <a href='https://jaymade.app' target='_blank' rel='noopener'>jaymade.app</a> as my personal tech lab.">
                     </p>
 
-                    <p class="mb-6 typewriter-text"
+                    <p class="mb-6 typewriter-text" data-i18n-data-text="about.bio_3"
                         data-text="When I'm not coding, I'm usually running trails or experimenting with biohacking. I find that getting outside is the best way to untangle a hard problem. Most of my best ideas come mid-run.">
                     </p>
 
                     <p class="text-lg font-medium text-gray-800 dark:text-gray-200 italic typewriter-text"
+                        data-i18n-data-text="about.motto"
                         data-text="✨ 'Balance is in cycles.' I value freedom, meaningful work, and building things that matter.">
                     </p>
                 </div>
@@ -288,16 +318,19 @@
         <!-- Experience Section -->
         <section id="experience" class="section-base">
             <div class="max-w-7xl mx-auto">
-                <h2 class="section-heading">
+                <h2 class="section-heading" data-i18n="experience.heading">
                     Professional Experience</h2>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8">
                     <article class="card-base">
                         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-                            <h3 class="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2 sm:mb-0">
+                            <h3 class="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2 sm:mb-0"
+                                data-i18n="experience.job1.title">
                                 Context Engineer & Independent Developer</h3>
-                            <span class="text-sm text-gray-600 dark:text-gray-400">02/2025 - Present</span>
+                            <span class="text-sm text-gray-600 dark:text-gray-400"
+                                data-i18n="experience.job1.period">02/2025 - Present</span>
                         </div>
-                        <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4">Orchestrating intelligent
+                        <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4"
+                            data-i18n="experience.job1.description">Orchestrating intelligent
                             systems with spec-driven development and AI-powered workflows. Building products like
                             rozhybejfoto.cz (AI photo animation) and jaymade.app (technology portal). Focused on Rust
                             backends, Next.js frontends, and self-hosted infrastructure on Coolify/Hetzner.</p>
@@ -311,11 +344,14 @@
                     </article>
                     <div class="card-base">
                         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-                            <h3 class="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2 sm:mb-0">PHP
+                            <h3 class="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2 sm:mb-0"
+                                data-i18n="experience.job2.title">PHP
                                 Developer at NaniNails 💅</h3>
-                            <span class="text-sm text-gray-600 dark:text-gray-400">09/2022 - 12/2024</span>
+                            <span class="text-sm text-gray-600 dark:text-gray-400"
+                                data-i18n="experience.job2.period">09/2022 - 12/2024</span>
                         </div>
-                        <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4">Led development of custom
+                        <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4"
+                            data-i18n="experience.job2.description">Led development of custom
                             PHP libraries for shipping APIs, implemented security enhancements, and developed
                             data-driven reporting solutions at Czechia's leading nail cosmetics company. Reduced backend
                             response times by ~40% through GraphQL implementation.</p>
@@ -329,11 +365,14 @@
                     </div>
                     <div class="card-base">
                         <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
-                            <h3 class="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2 sm:mb-0">Web
+                            <h3 class="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-2 sm:mb-0"
+                                data-i18n="experience.job3.title">Web
                                 Developer at Webdevel</h3>
-                            <span class="text-sm text-gray-600 dark:text-gray-400">06/2021 - 08/2022</span>
+                            <span class="text-sm text-gray-600 dark:text-gray-400"
+                                data-i18n="experience.job3.period">06/2021 - 08/2022</span>
                         </div>
-                        <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4">Specialized in developing
+                        <p class="text-sm sm:text-base text-gray-600 dark:text-gray-300 mb-4"
+                            data-i18n="experience.job3.description">Specialized in developing
                             custom WordPress themes and WooCommerce solutions. Improved site performance and implemented
                             responsive designs for various e-commerce clients.</p>
                         <div class="flex flex-wrap gap-2">
@@ -350,12 +389,13 @@
         <!-- Skills Section -->
         <section class="section-large">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="section-heading">
+                <h2 class="section-heading" data-i18n="skills.heading">
                     Technical Skills</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                     <!-- Frontend -->
                     <div class="card-base">
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 ml-0.5">Frontend</h3>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 ml-0.5"
+                            data-i18n="skills.frontend">Frontend</h3>
                         <div class="flex flex-wrap gap-2">
                             <span class="experience-tag tag-blue">React.js</span>
                             <span class="experience-tag tag-yellow">Next.js</span>
@@ -363,12 +403,14 @@
                             <span class="experience-tag tag-purple">TypeScript</span>
                             <span class="experience-tag tag-indigo">Vite</span>
                             <span class="experience-tag tag-pink">Leptos</span>
+                            <span class="experience-tag tag-red">Tauri</span>
                         </div>
                     </div>
 
                     <!-- Backend -->
                     <div class="card-base">
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 ml-0.5">Backend</h3>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 ml-0.5"
+                            data-i18n="skills.backend">Backend</h3>
                         <div class="flex flex-wrap gap-2">
                             <span class="experience-tag tag-red">Rust (Axum)</span>
                             <span class="experience-tag tag-blue">PHP</span>
@@ -382,21 +424,22 @@
 
                     <!-- Infrastructure & DevOps -->
                     <div class="card-base">
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 ml-0.5">Infrastructure &
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 ml-0.5"
+                            data-i18n="skills.infra">Infrastructure &
                             DevOps</h3>
                         <div class="flex flex-wrap gap-2">
                             <span class="experience-tag tag-green">Docker</span>
                             <span class="experience-tag tag-purple">Linux/Ubuntu</span>
                             <span class="experience-tag tag-blue">Hetzner</span>
                             <span class="experience-tag tag-yellow">Coolify</span>
-                            <span class="experience-tag tag-indigo">Tauri</span>
                             <span class="experience-tag tag-blue">DigitalOcean</span>
                         </div>
                     </div>
 
                     <!-- Databases -->
                     <div class="card-base">
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 ml-0.5">Databases</h3>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 ml-0.5"
+                            data-i18n="skills.databases">Databases</h3>
                         <div class="flex flex-wrap gap-2">
                             <span class="experience-tag tag-blue">PostgreSQL</span>
                             <span class="experience-tag tag-red">Redis</span>
@@ -407,7 +450,8 @@
 
                     <!-- AI & Orchestration -->
                     <div class="card-base">
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 ml-0.5">AI & Orchestration
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 ml-0.5"
+                            data-i18n="skills.ai">AI & Orchestration
                         </h3>
                         <div class="flex flex-wrap gap-2">
                             <span class="experience-tag tag-purple">AI Orchestration</span>
@@ -419,7 +463,8 @@
 
                     <!-- Other Skills -->
                     <div class="card-base">
-                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 ml-0.5">Other Skills</h3>
+                        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4 ml-0.5"
+                            data-i18n="skills.other">Other Skills</h3>
                         <div class="flex flex-wrap gap-2">
                             <span class="experience-tag tag-indigo">API Development</span>
                             <span class="experience-tag tag-green">Python</span>
@@ -434,16 +479,47 @@
 
         <!-- Projects Section -->
         <section id="projects" class="section-base">
-            <h2 class="section-heading">
+            <h2 class="section-heading" data-i18n="projects.heading">
                 Featured Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 max-w-7xl mx-auto">
+                <article class="card-base group overflow-hidden flex flex-col h-full">
+                    <div class="p-6 flex flex-col h-full">
+                        <div class="grow">
+                            <h3 class="text-xl sm:text-xl md:text-2xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"
+                                data-i18n="projects.portfolio.title">
+                                🌐 Personal Portfolio</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4" data-i18n="projects.portfolio.description">
+                                This website is a modern, responsive
+                                portfolio built with Vite and Tailwind CSS v4, featuring dark mode, starfield effects,
+                                and containerized deployment with Bun.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="experience-tag tag-pink">Vite</span>
+                                <span class="experience-tag tag-indigo">Tailwind CSS v4</span>
+                                <span class="experience-tag tag-green">Bun</span>
+                                <span class="experience-tag tag-blue">Docker</span>
+                            </div>
+                        </div>
+                        <div class="mt-auto pt-4">
+                            <a href="https://github.com/excap3r/jakubsladek.cz" target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-flex items-center text-blue-600 dark:text-blue-400"
+                                aria-label="View Portfolio source code" data-i18n="projects.portfolio.link">
+                                View Source <img src="./src/images/icons/arrow-right-light.svg"
+                                    class="w-4 h-4 ml-2 block dark:hidden" alt="" aria-hidden="true"><img
+                                    src="./src/images/icons/arrow-right-dark.svg" class="w-4 h-4 ml-2 hidden dark:block"
+                                    alt="" aria-hidden="true">
+                            </a>
+                        </div>
+                    </div>
+                </article>
                 <article class="card-base group overflow-hidden flex flex-col h-full">
                     <div class="p-6 flex flex-col h-full">
                         <div class="grow">
                             <h3
                                 class="text-xl sm:text-xl md:text-2xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                 🚀 rozhybejfoto.cz</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-4">AI-powered photo animation service. Upload
+                            <p class="text-gray-600 dark:text-gray-300 mb-4"
+                                data-i18n="projects.rozhybejfoto.description">AI-powered photo animation service. Upload
                                 a photo and get a stunning animated video in about a minute. Simple, fast, and private.
                             </p>
                             <div class="flex flex-wrap gap-2 mb-4">
@@ -456,7 +532,7 @@
                         <div class="mt-auto pt-4">
                             <a href="https://rozhybejfoto.cz" target="_blank" rel="noopener noreferrer"
                                 class="inline-flex items-center text-blue-600 dark:text-blue-400"
-                                aria-label="View rozhybejfoto.cz project">
+                                aria-label="View rozhybejfoto.cz project" data-i18n="projects.rozhybejfoto.link">
                                 View Project <img src="./src/images/icons/arrow-right-light.svg"
                                     class="w-4 h-4 ml-2 block dark:hidden" alt="" aria-hidden="true"><img
                                     src="./src/images/icons/arrow-right-dark.svg" class="w-4 h-4 ml-2 hidden dark:block"
@@ -471,8 +547,9 @@
                             <h3
                                 class="text-xl sm:text-xl md:text-2xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                 🧬 jaymade.app</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-4">My personal portal and project overview.
-                                A simple site showcasing what I'm working on and how to get in touch.</p>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4" data-i18n="projects.jaymade.description">My
+                                project hub where you can find all my work in one place.
+                                A growing collection of everything I'm building and experimenting with.</p>
                             <div class="flex flex-wrap gap-2 mb-4">
                                 <span class="experience-tag tag-yellow">Vite</span>
                                 <span class="experience-tag tag-purple">Google Stitch</span>
@@ -484,37 +561,8 @@
                         <div class="mt-auto pt-4">
                             <a href="https://jaymade.app" target="_blank" rel="noopener noreferrer"
                                 class="inline-flex items-center text-blue-600 dark:text-blue-400"
-                                aria-label="View jaymade.app project">
+                                aria-label="View jaymade.app project" data-i18n="projects.jaymade.link">
                                 View Project <img src="./src/images/icons/arrow-right-light.svg"
-                                    class="w-4 h-4 ml-2 block dark:hidden" alt="" aria-hidden="true"><img
-                                    src="./src/images/icons/arrow-right-dark.svg" class="w-4 h-4 ml-2 hidden dark:block"
-                                    alt="" aria-hidden="true">
-                            </a>
-                        </div>
-                    </div>
-                </article>
-                <article class="card-base group overflow-hidden flex flex-col h-full">
-                    <div class="p-6 flex flex-col h-full">
-                        <div class="grow">
-                            <h3
-                                class="text-xl sm:text-xl md:text-2xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                                🌐 Personal Portfolio</h3>
-                            <p class="text-gray-600 dark:text-gray-300 mb-4">This website is a modern, responsive
-                                portfolio built with Vite and Tailwind CSS v4, featuring dark mode, starfield effects,
-                                and containerized deployment with Bun.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="experience-tag tag-pink">Vite</span>
-                                <span class="experience-tag tag-indigo">Tailwind CSS v4</span>
-                                <span class="experience-tag tag-green">Bun</span>
-                                <span class="experience-tag tag-blue">Docker</span>
-                            </div>
-                        </div>
-                        <div class="mt-auto pt-4">
-                            <a href="https://github.com/excap3r/jakubsladek.cz" target="_blank"
-                                rel="noopener noreferrer"
-                                class="inline-flex items-center text-blue-600 dark:text-blue-400"
-                                aria-label="View Portfolio source code">
-                                View Source <img src="./src/images/icons/arrow-right-light.svg"
                                     class="w-4 h-4 ml-2 block dark:hidden" alt="" aria-hidden="true"><img
                                     src="./src/images/icons/arrow-right-dark.svg" class="w-4 h-4 ml-2 hidden dark:block"
                                     alt="" aria-hidden="true">
@@ -529,10 +577,11 @@
         <section id="contact" class="relative section-large">
             <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
-                    <h2 class="section-heading text-4xl sm:text-4xl md:text-5xl mb-6 sm:mb-8 tracking-tight">
+                    <h2 class="section-heading text-4xl sm:text-4xl md:text-5xl mb-6 sm:mb-8 tracking-tight"
+                        data-i18n="contact.heading">
                         Let's Work Together</h2>
-                    <p
-                        class="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto px-4 sm:px-0">
+                    <p class="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto px-4 sm:px-0"
+                        data-i18n="contact.description">
                         I'm
                         always interested in hearing about new projects and opportunities. Whether you have a question,
                         want to start a project, or simply want to connect, feel free to reach out!</p>
@@ -540,17 +589,19 @@
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 sm:mb-12">
                     <a href="mailto:jay@jaymade.app" class="btn-social btn-email"
-                        aria-label="Email me at jay@jaymade.app">
+                        data-i18n-aria-label="contact.email_aria" aria-label="Email me at jay@jaymade.app">
                         <img src="./src/images/icons/email.svg" class="btn-icon" alt="" aria-hidden="true">
                         jay@jaymade.app
                     </a>
                     <a href="https://www.instagram.com/jaymade.app" target="_blank" rel="noopener noreferrer"
-                        class="btn-social btn-instagram" aria-label="Visit my Instagram profile">
+                        class="btn-social btn-instagram" data-i18n-aria-label="contact.instagram_aria"
+                        aria-label="Visit my Instagram profile">
                         <img src="./src/images/icons/instagram.svg" class="btn-icon" alt="" aria-hidden="true">
                         Instagram
                     </a>
                     <a href="https://github.com/excap3r" target="_blank" rel="noopener noreferrer"
-                        class="btn-social btn-github" aria-label="Visit my GitHub profile">
+                        class="btn-social btn-github" data-i18n-aria-label="contact.github_aria"
+                        aria-label="Visit my GitHub profile">
                         <img src="./src/images/icons/github.svg" class="btn-icon" alt="" aria-hidden="true">
                         GitHub
                     </a>
@@ -571,12 +622,21 @@
 
     <!-- Footer -->
     <footer class="py-6 bg-pure-white border-t border-gray-200 dark:border-gray-800 site-footer">
-        <div class="text-center text-gray-600 dark:text-gray-400 text-sm">
+        <div class="text-center text-gray-600 dark:text-gray-400 text-sm" data-i18n="footer.text">
             Made with <span class="text-red-500">❤️</span> by Jakub Sládek
         </div>
     </footer>
 
     <!-- Scripts -->
+    <script>
+        // Set language preference cookie when switching languages
+        document.addEventListener('click', function (e) {
+            var link = e.target.closest('a[data-lang-switch]');
+            if (!link) return;
+            var lang = link.getAttribute('href').replace(/\//g, '') || 'en';
+            document.cookie = 'lang_pref=' + lang + ';path=/;max-age=2592000;SameSite=Lax';
+        });
+    </script>
     <script type="module" src="./src/main.js"></script>
 </body>
 

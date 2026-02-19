@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import viteCompression from 'vite-plugin-compression'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
+import i18nPlugin from './vite-plugin-i18n.js'
 
 export default defineConfig({
   server: {
@@ -56,6 +57,7 @@ export default defineConfig({
       deleteOriginFile: false,
     }),
     ViteImageOptimizer({
+      exclude: /^(js-|logo)/,
       png: {
         quality: 75,
       },
@@ -81,5 +83,6 @@ export default defineConfig({
         ],
       },
     }),
+    i18nPlugin(),
   ],
 })
