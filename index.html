@@ -169,7 +169,7 @@
         <!-- Navigation Bar -->
         <nav
             class="fixed w-full z-50 bg-pure-white/80 dark:bg-pure-black/80 backdrop-blur-xs border-b border-gray-200 dark:border-gray-700">
-            <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex justify-between items-center h-14 sm:h-16">
                     <div class="shrink-0">
                         <img src="/images/logo.png" alt="Jakub Sládek" class="h-6 sm:h-8 w-auto">
@@ -200,44 +200,53 @@
                                     </svg></span> <span data-i18n="lang.switch_label">CS</span></a>
                         </div>
                     </div>
-                    <!-- Mobile Hamburger Button -->
-                    <button id="mobileMenuBtn" class="md:hidden p-2 text-gray-700 dark:text-gray-300"
-                        aria-label="Open navigation menu">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                    <!-- Theme Toggle Button -->
-                    <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
-                        <img src="./src/images/icons/sun.svg" alt=""
-                            class="theme-toggle-icon text-gray-800 dark:text-yellow-300 theme-toggle-light"
-                            aria-hidden="true" width="24" height="24" fetchpriority="high">
-                        <img src="./src/images/icons/moon.svg" alt=""
-                            class="hidden theme-toggle-icon text-gray-800 dark:text-gray-200 theme-toggle-dark"
-                            aria-hidden="true" width="24" height="24" fetchpriority="high">
-                    </button>
+                    <!-- Right-side controls (theme toggle + mobile hamburger) -->
+                    <div class="flex items-center gap-1">
+                        <!-- Theme Toggle Button (desktop only) -->
+                        <button id="themeToggle" class="hidden md:inline-flex theme-toggle-btn ml-4"
+                            aria-label="Toggle dark mode">
+                            <img src="./src/images/icons/sun.svg" alt=""
+                                class="theme-toggle-icon text-gray-800 dark:text-yellow-300 theme-toggle-light"
+                                aria-hidden="true" width="24" height="24" fetchpriority="high">
+                            <img src="./src/images/icons/moon.svg" alt=""
+                                class="hidden theme-toggle-icon text-gray-800 dark:text-gray-200 theme-toggle-dark"
+                                aria-hidden="true" width="24" height="24" fetchpriority="high">
+                        </button>
+                        <!-- Mobile Hamburger Button -->
+                        <button id="mobileMenuBtn" class="md:hidden p-2 text-gray-700 dark:text-gray-300"
+                            aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+                            <svg class="w-6 h-6 hamburger-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                            <svg class="w-6 h-6 close-icon hidden" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
             <!-- Mobile Navigation Drawer -->
             <div id="mobileMenu"
-                class="hidden md:hidden border-t border-gray-200 dark:border-gray-700 bg-pure-white/95 dark:bg-pure-black/95 backdrop-blur-xs">
-                <div class="px-4 py-3 space-y-2">
+                class="md:hidden border-t border-gray-200 dark:border-gray-700 bg-pure-white/95 dark:bg-pure-black/95 backdrop-blur-xs overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0">
+                <div class="px-4 py-3 space-y-1 text-center">
                     <a href="#home"
-                        class="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                        class="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 px-3 py-3 rounded-lg text-base font-medium transition-colors duration-200"
                         data-i18n="nav.home">Home</a>
                     <a href="#about"
-                        class="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                        class="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 px-3 py-3 rounded-lg text-base font-medium transition-colors duration-200"
                         data-i18n="nav.about">About</a>
                     <a href="#projects"
-                        class="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                        class="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 px-3 py-3 rounded-lg text-base font-medium transition-colors duration-200"
                         data-i18n="nav.projects">Projects</a>
                     <a href="#contact"
-                        class="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+                        class="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 px-3 py-3 rounded-lg text-base font-medium transition-colors duration-200"
                         data-i18n="nav.contact">Contact</a>
                     <!-- Language Switcher (Mobile) -->
                     <a href="/cs/" data-i18n-href="lang.switch_url" data-lang-switch
-                        class="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 inline-flex items-center gap-1.5"
+                        class="inline-flex items-center justify-center gap-1.5 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-800 px-3 py-3 rounded-lg text-base font-medium transition-colors duration-200"
                         data-i18n-aria-label="lang.switch_aria" aria-label="Přepnout do češtiny"><span
                             data-i18n="lang.switch_flag"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600"
                                 class="w-5 h-3.5 rounded-sm shadow-sm">
@@ -245,6 +254,17 @@
                                 <rect width="900" height="300" fill="#fff" />
                                 <path d="M 0,0 450,300 0,600 z" fill="#11457e" />
                             </svg></span> <span data-i18n="lang.switch_label">CS</span></a>
+                    <!-- Theme Toggle (Mobile) -->
+                    <div class="pt-2 border-t border-gray-200 dark:border-gray-700 mt-2">
+                        <button id="mobileThemeToggle" class="theme-toggle-btn mx-auto" aria-label="Toggle dark mode">
+                            <img src="./src/images/icons/sun.svg" alt=""
+                                class="theme-toggle-icon text-gray-800 dark:text-yellow-300 theme-toggle-light"
+                                aria-hidden="true" width="24" height="24">
+                            <img src="./src/images/icons/moon.svg" alt=""
+                                class="hidden theme-toggle-icon text-gray-800 dark:text-gray-200 theme-toggle-dark"
+                                aria-hidden="true" width="24" height="24">
+                        </button>
+                    </div>
                 </div>
             </div>
         </nav>
