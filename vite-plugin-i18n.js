@@ -16,14 +16,18 @@ function loadTranslations(locale) {
 /**
  * Replace data-i18n="key" → sets element text content.
  * Handles the pattern: <element data-i18n="key">default text</element>
+ *
+ * The closing tag is required to match the opening tag name (backref \1) so
+ * that nested elements (e.g. <span data-i18n="x"><svg>...</svg></span>) do not
+ * cause the inner element's closing tag to be misinterpreted as the wrapper's.
  */
 function replaceTextContent(html, translations) {
     return html.replace(
-        /(<[^>]+\s)data-i18n="([^"]+)"([^>]*>)([\s\S]*?)(<\/[^>]+>)/g,
-        (match, beforeAttr, key, afterAttr, _content, closingTag) => {
+        /<([a-zA-Z][a-zA-Z0-9]*)((?:\s[^>]*?)?\s)data-i18n="([^"]+)"([^>]*)>([\s\S]*?)<\/\1>/g,
+        (match, tag, beforeAttr, key, afterAttr, _content) => {
             const value = translations[key];
             if (value === undefined) return match;
-            return `${beforeAttr}data-i18n="${key}"${afterAttr}${value}${closingTag}`;
+            return `<${tag}${beforeAttr}data-i18n="${key}"${afterAttr}>${value}</${tag}>`;
         }
     );
 }

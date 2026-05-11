@@ -650,15 +650,6 @@
     </footer>
 
     <!-- Scripts -->
-    <script>
-        // Set language preference cookie when switching languages
-        document.addEventListener('click', function (e) {
-            var link = e.target.closest('a[data-lang-switch]');
-            if (!link) return;
-            var lang = link.getAttribute('href').replace(/\//g, '') || 'en';
-            document.cookie = 'lang_pref=' + lang + ';path=/;max-age=2592000;SameSite=Lax';
-        });
-    </script>
     <script type="module" src="./src/main.js"></script>
 </body>
 
